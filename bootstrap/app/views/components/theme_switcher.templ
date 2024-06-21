@@ -2,15 +2,15 @@ package components
 
 templ ThemeSwitcher() {
 	<div 
-    x-show="theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)" 
-    class="cursor-pointer" 
-    @click={ "theme = 'light'" }>
-		@LightIcon()
+                x-show="theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)"
+                class="cursor-pointer"
+                @click={ "theme = 'light'" }>
+                @LightIcon()
 	</div>
 	<div 
-    x-show="theme === 'light' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: light)').matches)" 
-    class="cursor-pointer" 
-    @click={ "theme = 'dark'" }>
+                x-show="theme === 'light' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: light)').matches)"
+                class="cursor-pointer"
+                @click={ "theme = 'dark'" }>
 		@DarkIcon()
 	</div>
 }
